@@ -9,6 +9,7 @@
   "author": "Tico S. Thepsourinthone",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^5.0.3"
   }
 }
