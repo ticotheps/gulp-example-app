@@ -44,6 +44,4 @@ gulp.task('sass', function(){
 });
 
 // Create a default task to run with the 'gulp' command
-gulp.task('default', function(){
-    return console.log('Gulp is running...');
-});
+gulp.task('default', ['message', 'copyHtml', 'imageMin', 'minfiy', 'sass']);
