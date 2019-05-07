@@ -28,6 +28,13 @@ gulp.task('imageMin', () =>
         .pipe(gulp.dest('dist/images')) // <- don't have to create the 'dist/images' folder, gulp will do this for you
 );
 
+// Minify JS
+gulp.task('minify', function(){
+    gulp.src('src/js/*') // <- selects ANY .js file
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js')); // <- gulp will create a 'dist/js' file for you
+});
+
 // Create a default task to run with the 'gulp' command
 gulp.task('default', function(){
     return console.log('Gulp is running...');
