@@ -48,19 +48,13 @@ gulp.task('sass', function(){
 gulp.task('scripts', function(){
     gulp.src('src/js/*.js')
         .pipe(concat('main.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
-// Create a default task to run with the 'gulp' command
-gulp.task('default', ['message', 'copyHtml', 'imageMin', 'minify', 'sass']);
-
-// function defaultTask(cb) {
-//     'message';
-//     'copyHtml';
-//     'imageMin';
-//     'minify';
-//     'sass';
-//     cb();
-//   }
-  
-// exports.default = defaultTask
+gulp.task('watch', function(){
+    gulp.watch('src/js/*.js', ['scripts']);
+    gulp.watch('src/js/*', ['imageMin']);
+    gulp.watch('src/sass/*.scss', ['sass']);
+    gulp.watch('src/js/*.html', ['copyHtml']);
+});
