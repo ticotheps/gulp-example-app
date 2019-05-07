@@ -35,6 +35,13 @@ gulp.task('minify', function(){
         .pipe(gulp.dest('dist/js')); // <- gulp will create a 'dist/js' file for you
 });
 
+// Compile Sass
+gulp.task('sass', function(){
+    gulp.src('src/sass/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('dist/css'));
+});
+
 // Create a default task to run with the 'gulp' command
 gulp.task('default', function(){
     return console.log('Gulp is running...');
