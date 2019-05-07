@@ -1,0 +1,14 @@
+{
+  "name": "gulp-example-app",
+  "version": "1.0.0",
+  "description": "Example gulp app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tico S. Thepsourinthone",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
