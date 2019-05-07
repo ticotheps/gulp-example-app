@@ -21,10 +21,10 @@ gulp.task('copyHtml', function(){
 });
 
 // Optimize Images
-gulp.task('imageMin', () =>
-    gulp.src('src/images/*')    
+gulp.task('', () =>
+    gulp.src('src/images/*') // <- Optimizes all images in the 'src/images' folder; you must create an 'images' folder in 'src' folder
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('dist/images')) // <- don't have to create the 'dist/images' folder, gulp will do this for you
 );
 
 // Create a default task to run with the 'gulp' command
